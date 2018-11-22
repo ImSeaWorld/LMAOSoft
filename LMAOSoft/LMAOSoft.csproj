@@ -1,0 +1,275 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2A639B50-2AE5-4B69-82C5-5652F805D338}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LMAOSoft</RootNamespace>
+    <AssemblyName>LMAOSoft</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>favicon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Be.HexBox, Version=1.6.0.38064, Culture=neutral, PublicKeyToken=e0e5adf0ebc99863, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Be.HexBox.dll</HintPath>
+    </Reference>
+    <Reference Include="JRPC, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\JRPC.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="X360, Version=1.0.0.41, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\X360.dll</HintPath>
+    </Reference>
+    <Reference Include="xdevkit, Version=2.0.21076.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>bin\Debug\xdevkit.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="frm_main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_main.Designer.cs">
+      <DependentUpon>frm_main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inc\EndianIO\EndianIO.cs" />
+    <Compile Include="Inc\EndianIO\EndianReader.cs" />
+    <Compile Include="Inc\EndianIO\EndianStyle.cs" />
+    <Compile Include="Inc\EndianIO\EndianWriter.cs" />
+    <Compile Include="Inc\Extensions\FormEssentials.cs" />
+    <Compile Include="Inc\Forms\Apps\frm_ip_grabber.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inc\Forms\Apps\frm_ip_grabber.Designer.cs">
+      <DependentUpon>frm_ip_grabber.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inc\Forms\Apps\frm_xuid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inc\Forms\Apps\frm_xuid.Designer.cs">
+      <DependentUpon>frm_xuid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inc\Forms\Debug\frm_dump_memory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inc\Forms\Debug\frm_dump_memory.Designer.cs">
+      <DependentUpon>frm_dump_memory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inc\Forms\Tools\frm_edit_ini_ez.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inc\Forms\Tools\frm_edit_ini_ez.Designer.cs">
+      <DependentUpon>frm_edit_ini_ez.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inc\Forms\Tools\Game Info\frm_game_info.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inc\Forms\Tools\Game Info\frm_game_info.Designer.cs">
+      <DependentUpon>frm_game_info.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inc\Forms\Tools\frm_kv_vault.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inc\Forms\Tools\frm_kv_vault.Designer.cs">
+      <DependentUpon>frm_kv_vault.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inc\Forms\Tools\frm_edit_ini.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inc\Forms\Tools\frm_edit_ini.Designer.cs">
+      <DependentUpon>frm_edit_ini.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inc\Forms\Tools\frm_file_browser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inc\Forms\Tools\frm_file_browser.Designer.cs">
+      <DependentUpon>frm_file_browser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inc\Forms\Tools\frm_screen_shot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inc\Forms\Tools\frm_screen_shot.Designer.cs">
+      <DependentUpon>frm_screen_shot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inc\Forms\Tools\Game Info\frm_game_info_multiple.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inc\Forms\Tools\Game Info\frm_game_info_multiple.Designer.cs">
+      <DependentUpon>frm_game_info_multiple.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inc\Forms\Tools\Sub Form\frm_sub_edit_ini.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inc\Forms\Tools\Sub Form\frm_sub_edit_ini.Designer.cs">
+      <DependentUpon>frm_sub_edit_ini.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inc\Forms\Tools\Sub Form\frm_sub_screen_shot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inc\Forms\Tools\Sub Form\frm_sub_screen_shot.Designer.cs">
+      <DependentUpon>frm_sub_screen_shot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inc\Misc\Functions.cs" />
+    <Compile Include="Inc\Misc\imgur.cs" />
+    <Compile Include="Inc\Misc\KVFunctions.cs" />
+    <Compile Include="Inc\Misc\Settings.cs" />
+    <Compile Include="Inc\Misc\Vars.cs" />
+    <Compile Include="Inc\Misc\XKA.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frm_main.resx">
+      <DependentUpon>frm_main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inc\Forms\Apps\frm_ip_grabber.resx">
+      <DependentUpon>frm_ip_grabber.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inc\Forms\Apps\frm_xuid.resx">
+      <DependentUpon>frm_xuid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inc\Forms\Debug\frm_dump_memory.resx">
+      <DependentUpon>frm_dump_memory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inc\Forms\Tools\frm_edit_ini_ez.resx">
+      <DependentUpon>frm_edit_ini_ez.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inc\Forms\Tools\frm_kv_vault.resx">
+      <DependentUpon>frm_kv_vault.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inc\Forms\Tools\frm_edit_ini.resx">
+      <DependentUpon>frm_edit_ini.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inc\Forms\Tools\frm_file_browser.resx">
+      <DependentUpon>frm_file_browser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inc\Forms\Tools\frm_screen_shot.resx">
+      <DependentUpon>frm_screen_shot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inc\Forms\Tools\Game Info\frm_game_info.resx">
+      <DependentUpon>frm_game_info.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inc\Forms\Tools\Game Info\frm_game_info_multiple.resx">
+      <DependentUpon>frm_game_info_multiple.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inc\Forms\Tools\Sub Form\frm_sub_edit_ini.resx">
+      <DependentUpon>frm_sub_edit_ini.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inc\Forms\Tools\Sub Form\frm_sub_screen_shot.resx">
+      <DependentUpon>frm_sub_screen_shot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="App.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="empty.jpg" />
+    <Content Include="favicon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
